@@ -1,0 +1,40 @@
+{
+  "name": "gdelt-gui",
+  "version": "1.0.0",
+  "description": "A graphical user interface for the GDELT DOC API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewinfox/gdelt-gui.git"
+  },
+  "keywords": [
+    "gdelt"
+  ],
+  "author": "Lewin Appleton-Fox",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lewinfox/gdelt-gui/issues"
+  },
+  "homepage": "https://github.com/lewinfox/gdelt-gui#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

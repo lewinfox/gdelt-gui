@@ -1,4 +1,5 @@
-html {
-	font-family: sans-serif;
-	color: green;
+iframe {
+    width: 90vw;
+    height: 70vh;
+    border: none;
 }

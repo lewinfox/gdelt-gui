@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<title>GDELT GUI</title>
-	</head>
-	<body>
-		<div class="controls">
-			<h1>GDELT GUI</h1>
-			<p>This app is powered by the <a href="https://www.gdeltproject.org">GDELT project</a></p>
-			<p>Testing testing</p>
 
-			<form class="controls">
-				<input type="text" placeholder="Enter your query term">
-				<input type="" name="" value="">
-			</form>
-		</div>
-		<div class="display">
-			<iframe src="" width="" height=""></iframe>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>GDELT GUI</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+    <div class="controls">
+        <h1>GDELT GUI</h1>
+        <p>This app is powered by the <a href="https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/">GDELT
+                project</a></p>
+        <p>Enter a query below and choose your output type.</p>
+
+        <form class="controls">
+            <input id="query-input" type="text" placeholder="Enter your query term">
+            <select name="chart-type" id="mode-input">
+                <option value="timelinevolinfo">Volume chart</option>
+                <option value="tonechart">Tone chart</option>
+                <option value="imagecollage">Image collage</option>
+                <option value="artlist">Article list</option>
+                <option value="rssarchive">RSS archive</option>
+                <option value="artgallery">Article gallery</option>
+                <option value="imagegallery">Image gallery</option>
+            </select>
+            <button id="submit-button">Go</button>
+        </form>
+    </div>
+    <div class="display">
+        <iframe id="iframe" src=""></iframe>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
 </html>

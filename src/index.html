@@ -4,34 +4,65 @@
 <head>
     <meta charset="utf-8">
     <title>GDELT GUI</title>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css'>
-    <link rel="stylesheet" href="css/master.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the iframe container */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            margin: 0 auto;
+            /* Center the iframe horizontally */
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="controls">
-        <h1>GDELT GUI</h1>
-        <p>This app is powered by the <a href="https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/">GDELT
-                project</a></p>
-        <p>Enter a query below and choose your output type.</p>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h1>GDELT GUI</h1>
+                <p>This app is powered by the <a href="https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/">GDELT
+                        project</a>. Enter a query below and choose your output type.</p>
 
-        <form class="controls">
-            <input id="query-input" type="text" placeholder="Enter your query term">
-            <select name="chart-type" id="mode-input">
-                <option value="timelinevolinfo">Volume chart</option>
-                <option value="tonechart">Tone chart</option>
-                <option value="imagecollage">Image collage</option>
-                <option value="artlist">Article list</option>
-                <option value="rssarchive">RSS archive</option>
-                <option value="artgallery">Article gallery</option>
-                <option value="imagegallery">Image gallery</option>
-            </select>
-            <button id="submit-button">Go</button>
-        </form>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" id="query-input" type="text" placeholder="Enter your query term">
+                        <select class="form-control" name="chart-type" id="mode-input">
+                            <option value="timelinevolinfo">Volume chart</option>
+                            <option value="tonechart">Tone chart</option>
+                            <option value="imagecollage">Image collage</option>
+                            <option value="artlist">Article list</option>
+                            <option value="rssarchive">RSS archive</option>
+                            <option value="artgallery">Article gallery</option>
+                            <option value="imagegallery">Image gallery</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="submit-button">Go</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-6">
+            <div class="col-md-12">
+                <div class="iframe-container">
+                    <iframe id="iframe" src=""></iframe>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="display">
-        <iframe id="iframe" src=""></iframe>
-    </div>
+
     <script src="js/index.js"></script>
 </body>
 

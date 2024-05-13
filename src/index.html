@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>GDELT GUI</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
     <style>
         /* Custom styles for the iframe container */
         .iframe-container {
@@ -35,22 +36,30 @@
             <div class="col-md-6">
                 <h1>GDELT GUI</h1>
                 <p>This app is powered by the <a href="https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/">GDELT
-                        project</a>. Enter a query below and choose your output type.</p>
+                        project</a></p>
+                <p>Enter a query below and choose your output type.</p>
 
                 <form>
-                    <div class="form-group">
-                        <input class="form-control" id="query-input" type="text" placeholder="Enter your query term">
-                        <select class="form-control" name="chart-type" id="mode-input">
-                            <option value="timelinevolinfo">Volume chart</option>
-                            <option value="tonechart">Tone chart</option>
-                            <option value="imagecollage">Image collage</option>
-                            <option value="artlist">Article list</option>
-                            <option value="rssarchive">RSS archive</option>
-                            <option value="artgallery">Article gallery</option>
-                            <option value="imagegallery">Image gallery</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="col">
+                            <input class="form-control" id="query-input" type="text"
+                                placeholder="Enter your query term">
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="chart-type" id="mode-input">
+                                <option value="timelinevolinfo">Volume chart</option>
+                                <option value="tonechart">Tone chart</option>
+                                <option value="imagecollage">Image collage</option>
+                                <option value="artlist">Article list</option>
+                                <option value="rssarchive">RSS archive</option>
+                                <option value="artgallery">Article gallery</option>
+                                <option value="imagegallery">Image gallery</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-primary" id="submit-button">Go</button>
+                        </div>
                     </div>
-                    <button class="btn btn-primary" id="submit-button">Go</button>
                 </form>
             </div>
         </div>
